@@ -9,7 +9,11 @@ const redis = require("redis")
 const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 
-
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.get('/url/getUrl', (req, res) => {
  connect.createConnection().then(client => {
@@ -55,7 +59,7 @@ app.post('/url/addUrl', jsonParser, (req, res) => {
      client.set(key, url, redis.print)
      client.get(key, (err, results) => {
        if(results){
-           res.send(key+results)
+           res.send(key)
        }else{
          res.send(err)
      }
