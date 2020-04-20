@@ -16,6 +16,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "randomstring": "^1.1.5",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "serve-favicon": "^2.5.0"
   }
 }

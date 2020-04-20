@@ -55,8 +55,12 @@ app.post('/url/addUrl', jsonParser, (req, res) => {
 
      var random = randomstring.generate(6);
      var key = "links:" + random;
-
-     client.set(key, url, redis.print)
+     
+     client.set(
+      
+      key, 
+      url, 
+      redis.print)
      client.get(key, (err, results) => {
        if(results){
            res.send(key)
