@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild": "cd react-redux-router && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd RedisProject && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
     "async": "^3.2.0",
