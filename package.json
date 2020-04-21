@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node app.js",
    
-    "heroku-postbuild": "cd RedisProject && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "ng build --prod"
   },
   "dependencies": {
     "async": "^3.1.0",
